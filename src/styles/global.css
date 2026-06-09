@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Milker';
+  src: url('/fonts/Milker.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TangoSans';
+  src: url('/fonts/TangoSans_Italic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
