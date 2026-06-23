@@ -2,39 +2,33 @@
 import Layout from "../layouts/Layout.astro"
 ---
 
-<footer class="w-full">
-    <div class="w-full bg-[#2d314d] flex flex-col justify-center items-center gap-6 p-6 xl:flex xl:flex-row xl:justify-between xl:px-30 xl:h-57.5">
+<footer class="w-full bg-[#2d314d] py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col xl:flex-row justify-between items-center xl:items-start gap-12">
         
-        <div class="xl:flex xl:w-[50%] xl:p-2.5">
-            <div class="xl:flex xl:flex-col xl:items-center xl:justify-between xl:w-[50%] xl:p-2.5 ">
-                <img src="/public/images/logo-light.svg" alt="" width="200">
-                <div class=" flex gap-2 xl:gap-5">
-                    <img src="/public/images/facebook.png" alt="" class="icon">
-                    <img src="/public/images/youtube.png" alt="" class="icon">
-                    <img src="/public/images/instagram.png" alt="" class="icon">
-                    <img src="/public/images/twitter.png" alt="" class="icon">
-                </div>
-            </div>
-            <div class="xl:w-[50%]">
-                <div class="flex flex-col items-center justify-center text-white xl:flex xl:flex-row xl:p-2.5 xl:justify-between">
-                    <div class="xl:flex xl:flex-col xl:gap-4">
-                        <a href="#">About Us</a>
-                        <a href="#"> Contact</a>
-                        <a href="#">Blog</a>
-                    </div>
-                    <div class="xl:flex xl:flex-col xl:gap-4">
-                        <a href="#">Career</a>
-                        <a href="#">Support</a>
-                        <a href="#">Policy Privacy</a>
-                    </div>
-                </div>
+        <div class="flex flex-col items-center xl:items-start gap-8">
+            <img src="/public/images/logo-light.svg" alt="Logo" width="160">
+            <div class="flex gap-4">
+                <img src="/public/images/facebook.png" alt="FB" class="cursor-pointer hover:brightness-200">
+                <img src="/public/images/youtube.png" alt="YT" class="cursor-pointer hover:brightness-200">
+                <img src="/public/images/instagram.png" alt="IG" class="cursor-pointer hover:brightness-200">
+                <img src="/public/images/twitter.png" alt="TW" class="cursor-pointer hover:brightness-200">
             </div>
         </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-white text-center xl:text-left">
+            <a href="#" class="hover:text-emerald-400">About Us</a>
+            <a href="#" class="hover:text-emerald-400">Contact</a>
+            <a href="#" class="hover:text-emerald-400">Blog</a>
+            <a href="#" class="hover:text-emerald-400">Career</a>
+            <a href="#" class="hover:text-emerald-400">Support</a>
+            <a href="#" class="hover:text-emerald-400">Privacy Policy</a>
+        </div>
 
-        <div class="xl:flex xl:flex-col xl:gap-4 xl:items-end ">
-            <span class="text-white bg-linear-to-bl from-[hsl(136,64%,51%)] to-[hsl(192,69%,51%)] py-3 px-9 rounded-[40px] xl:w-fit ">Request Invite</span>
-            <span class="text-[#7e7e7e]">© Digitalbank. All Rights Reserved</span>
+        <div class="flex flex-col items-center xl:items-end gap-6">
+            <span class="text-white bg-linear-to-bl from-[hsl(136,64%,51%)] to-[hsl(192,69%,51%)] py-3 px-8 rounded-full cursor-pointer whitespace-nowrap">
+                Request Invite
+            </span>
+            <span class="text-[#7e7e7e] text-sm">© Digitalbank. All Rights Reserved</span>
         </div>
     </div>
 </footer>
