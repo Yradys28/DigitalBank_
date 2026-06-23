@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'milker': ['Milker', 'sans-serif'],
-        'tango': ['TangoSans', 'sans-serif'],
+        // Aquí le decimos a Tailwind que use 'Montserrat'
+        sans: ['Montserrat', 'sans-serif'],
       },
     },
   },

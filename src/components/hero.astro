@@ -1,17 +1,41 @@
 ---
 import astroLogo from '../assets/astro.svg';
 import background from '../assets/background.svg';
+import Layout from "../layouts/Layout.astro"
+
 ---
 
-<div class="relative w-full">
-    <div class="relative w-full"> 
+<div class="relative w-full xl:flex xl:flex-row-reverse">
+    <div class="relative w-full hero1 xl:hidden"> 
         <img src="/public/images/bg-intro-mobile.svg" class="w-full" alt="Fondo" />
-        <img src="/public/images/image-mockups.png" alt="Mockups" class="absolute -top-19 left-0 w-full z-10"/>
+        <img src="/public/images/image-mockups.png" alt="Mockups" class="absolute -top-19 left-0 w-full z-10 img"/>
     </div>
-    <div class="w-full flex flex-col gap-4 justify-center items-center p-7">
-        <h1 class=" text-[#2d314d] text-[42px] leading-12">Next generation <br> digital banking</h1>
-        <p class="text-[#8a8484] text-center leading-5">Take your financial life online. Your Digitalbank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
-        <span class="text-white bg-linear-to-bl from-[hsl(136,64%,51%)] to-[hsl(192,69%,51%)] py-3 px-9 rounded-[40px]">Request Invite</span>
+    <div class="relative w-full  -mr-80 -mt-5.5 sm:hidden md:hidden lg:hidden xl:flex mq">
+            <img src="/public/images/bg-intro-desktop.svg" class="w-full" alt="Fondo" />
+            <img src="/public/images/image-mockups.png" alt="Mockups" class="absolute -top-26 left-65 w-[70%] z-10 img"/>
+    </div>
+    <div class="w-full flex flex-col gap-4 justify-center items-center p-4 xl:px-17 xl:gap-8 xl:justify-start xl:mt-60 xl:items-start xl:max-w-[40%] hero2"> 
+            <h1 class=" text-[#2d314d] text-[36px] leading-11 xl:leading-17 xl:text-[63px]">Next generation <br> digital banking</h1>
+            <p class="text-[#8a8484] text-center leading-5 xl:text-[20px] xl:max-w-[90%] xl:leading-8">Take your financial life online. Your Digitalbank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
+            <span class="text-white bg-linear-to-bl from-[hsl(136,64%,51%)] to-[hsl(192,69%,51%)] py-3 px-9 rounded-[40px] xl:py-5 xl:px-11 xl:text-[18px]">Request Invite</span>
+        
     </div>
 </div>
+
+<style>
+    p{
+        font-family: "Montserrat", sans-serif;
+    }
+
+    h1, span{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+    }
+    @media (max-width: 640px){
+        .mq{
+            display: none;
+        }
+    }
+
+</style>
 
