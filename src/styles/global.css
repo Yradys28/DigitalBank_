@@ -1,19 +1,55 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'Milker';
-  src: url('/fonts/Milker.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 }
 
-@font-face {
-  font-family: 'TangoSans';
-  src: url('/fonts/TangoSans_Italic.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 500;
+  }
 }
 
+@layer components {
+  .btn-invite {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    background-image: linear-gradient(to bottom left, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
+    color: #fff;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
 
+  .btn-invite:hover {
+    opacity: 0.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

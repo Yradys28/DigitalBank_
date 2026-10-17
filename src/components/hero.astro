@@ -1,45 +1,41 @@
----
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
-import Layout from "../layouts/Layout.astro"
+<section id="home" class="relative flex w-full flex-col items-center overflow-hidden xl:flex-row-reverse">
 
----
+	<div class="relative w-full xl:w-1/2">
+		<img src="/images/bg-intro-mobile.svg" class="w-full xl:hidden" alt="" />
+		<img src="/images/bg-intro-desktop.svg" class="hidden w-full scale-150 translate-x-20 xl:block" alt="" />
 
-<section class="relative w-full flex flex-col xl:flex-row-reverse items-center overflow-hidden">
-    
-    <div class="relative w-full xl:w-1/2">
-        <img src="/images/bg-intro-mobile.svg" class="w-full xl:hidden" alt="Fondo" />
-        <img src="/images/bg-intro-desktop.svg" class="hidden xl:block w-full scale-150 translate-x-20" alt="Fondo Desktop" />
-        
-        <img src="/images/image-mockups.png" alt="Mockups" 
-             class="absolute -top-20 md:-top-32 xl:-top-40 left-0 w-full z-10 px-4 md:px-20 xl:px-0 xl:left-10"/>
-    </div>
+		<img src="/images/image-mockups.png" alt="Digitalbank app preview"
+			 class="absolute left-0 -top-20 z-10 w-full px-4 md:-top-32 md:px-20 xl:-top-40 xl:left-10 xl:px-0" />
+	</div>
 
-    <div class="w-full xl:w-1/2 flex flex-col gap-4 text-center xl:text-left items-center xl:items-start p-6 xl:px-20 mt-8 xl:mt-0"> 
-        <h1 class="text-[#2d314d] text-4xl xl:text-6xl leading-tight">Next generation <br> digital banking</h1>
-        <p class="text-[#8a8484] leading-relaxed xl:text-[20px] max-w-lg">
-            Take your financial life online. Your Digitalbank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
-        </p>
-        <span class="mt-4 text-white bg-linear-to-bl from-[hsl(136,64%,51%)] to-[hsl(192,69%,51%)] py-3 px-8 rounded-full font-medium cursor-pointer hover:opacity-90 transition-opacity">
-            Request Invite
-        </span>
-    </div>
+	<div class="flex w-full flex-col items-center gap-5 px-6 pt-10 pb-12 text-center xl:mt-0 xl:w-1/2 xl:px-16 xl:pt-40 xl:pb-20">
+		<span class="inline-flex items-center gap-2 rounded-full border border-[hsl(136,64%,51%/0.35)] bg-white px-4 py-1.5 text-[13px] font-medium text-[#2d314d] shadow-sm">
+			<span class="relative flex h-2 w-2" aria-hidden="true">
+				<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[hsl(136,64%,51%)] opacity-75"></span>
+				<span class="relative inline-flex h-2 w-2 rounded-full bg-[hsl(136,64%,51%)]"></span>
+			</span>
+			Invite-only Beta · Now live
+		</span>
+
+		<h1 class="text-4xl leading-tight text-[#2d314d] xl:text-6xl">Next generation <br> digital banking</h1>
+		<p class="max-w-xl leading-relaxed text-[#8a8484] xl:text-[20px]">
+			Take your financial life online. Your Digitalbank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
+		</p>
+		<button type="button" class="btn-invite mt-2">Request Invite</button>
+
+		<dl class="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 border-t border-[#2d314d]/10 pt-6">
+			<div class="flex flex-col items-center">
+				<dt class="order-2 text-[13px] text-[#8a8484]">Countries served</dt>
+				<dd class="order-1 text-2xl font-medium text-[#2d314d]">50+</dd>
+			</div>
+			<div class="flex flex-col items-center">
+				<dt class="order-2 text-[13px] text-[#8a8484]">Transferred safely</dt>
+				<dd class="order-1 text-2xl font-medium text-[#2d314d]">$1.2B</dd>
+			</div>
+			<div class="flex flex-col items-center">
+				<dt class="order-2 text-[13px] text-[#8a8484]">Happy customers</dt>
+				<dd class="order-1 text-2xl font-medium text-[#2d314d]">2M+</dd>
+			</div>
+		</dl>
+	</div>
 </section>
-
-<style>
-    p{
-        font-family: "Montserrat", sans-serif;
-    }
-
-    h1, span{
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-    }
-    @media (max-width: 640px){
-        .mq{
-            display: none;
-        }
-    }
-
-</style>
-

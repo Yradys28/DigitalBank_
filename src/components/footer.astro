@@ -1,50 +1,41 @@
 ---
-import Layout from "../layouts/Layout.astro"
+const LINKS = [
+	{ href: '#home', label: 'Home' },
+	{ href: '#features', label: 'Features' },
+	{ href: '#articles', label: 'Articles' },
+];
+
+const SOCIAL = [
+	{ icon: '/images/facebook.png', label: 'Facebook' },
+	{ icon: '/images/youtube.png', label: 'YouTube' },
+	{ icon: '/images/instagram.png', label: 'Instagram' },
+	{ icon: '/images/twitter.png', label: 'Twitter' },
+];
 ---
 
-<footer class="w-full bg-[#2d314d] py-12 px-6">
-    <div class="max-w-7xl mx-auto flex flex-col xl:flex-row justify-between items-center xl:items-start gap-12">
-        
-        <div class="flex flex-col items-center xl:items-start gap-8">
-            <img src="/images/logo-light.svg" alt="Logo" width="160">
-            <div class="flex gap-4">
-                <img src="/images/facebook.png" alt="FB" class="cursor-pointer hover:brightness-200">
-                <img src="/images/youtube.png" alt="YT" class="cursor-pointer hover:brightness-200">
-                <img src="/images/instagram.png" alt="IG" class="cursor-pointer hover:brightness-200">
-                <img src="/images/twitter.png" alt="TW" class="cursor-pointer hover:brightness-200">
-            </div>
-        </div>
+<footer class="w-full bg-[#2d314d] px-6 py-16">
+	<div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 text-center xl:grid-cols-3">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-white text-center xl:text-left">
-            <a href="#" class="hover:text-emerald-400">About Us</a>
-            <a href="#" class="hover:text-emerald-400">Contact</a>
-            <a href="#" class="hover:text-emerald-400">Blog</a>
-            <a href="#" class="hover:text-emerald-400">Career</a>
-            <a href="#" class="hover:text-emerald-400">Support</a>
-            <a href="#" class="hover:text-emerald-400">Privacy Policy</a>
-        </div>
+		<div class="flex flex-col items-center gap-6">
+			<img src="/images/logo-light.svg" alt="Digitalbank" width="160">
+			<div class="flex items-center gap-5">
+				{SOCIAL.map(({ icon, label }) => (
+					<a href="#" aria-label={label} class="cursor-pointer transition hover:brightness-200">
+						<img src={icon} alt="" width="20">
+					</a>
+				))}
+			</div>
+		</div>
 
-        <div class="flex flex-col items-center xl:items-end gap-6">
-            <span class="text-white bg-linear-to-bl from-[hsl(136,64%,51%)] to-[hsl(192,69%,51%)] py-3 px-8 rounded-full cursor-pointer whitespace-nowrap">
-                Request Invite
-            </span>
-            <span class="text-[#7e7e7e] text-sm">© Digitalbank. All Rights Reserved</span>
-        </div>
-    </div>
+		<nav aria-label="Footer" class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[15px] text-white">
+			{LINKS.map(({ href, label }) => (
+				<a href={href} class="transition-colors hover:text-emerald-400">{label}</a>
+			))}
+		</nav>
+
+		<div class="flex flex-col items-center gap-5">
+			<button type="button" class="btn-invite">Request Invite</button>
+			<span class="text-sm text-[#7e7e7e]">© Digitalbank. All Rights Reserved</span>
+		</div>
+	</div>
 </footer>
-
-<style>
-    footer{
-        font-family: "Montserrat", sans-serif;
-    }
-    a{
-        font-size: 15px;
-    }
-    a:hover{
-        color:#7e7e7e;
-    }
-    .icon{
-        height: 30px;
-        width: 30px;
-    }
-</style>
